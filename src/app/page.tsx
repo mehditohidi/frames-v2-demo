@@ -7,7 +7,7 @@ const frame = {
   version: "next",
   imageUrl: `${appUrl}/opengraph-image`,
   button: {
-    title: "Launch FARDART",
+    title: "Play Mini Dart",
     action: {
       type: "launch_frame",
       name: "MINI FARDART",

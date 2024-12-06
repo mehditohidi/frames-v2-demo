@@ -11,8 +11,8 @@ export const contentType = "image/png";
 export default async function Image() {
   return new ImageResponse(
     (
-      <div tw="h-full w-full flex flex-col justify-center items-center relative bg-brown">
-        <h1 tw="text-6xl text-white">MINI DART</h1>
+      <div tw="h-full w-full flex flex-col justify-center items-center relative bg-yellow-500">
+        <h1 tw="text-6xl">MINI DART</h1>
       </div>
     ),
     {
