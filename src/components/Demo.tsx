@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import sdk, {
-  FrameNotificationDetails,
   type FrameContext,
 } from "@farcaster/frame-sdk";
 export default function Demo(
