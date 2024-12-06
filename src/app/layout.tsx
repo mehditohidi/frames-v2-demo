@@ -4,8 +4,8 @@ import "~/app/globals.css";
 import { Providers } from "~/app/providers";
 
 export const metadata: Metadata = {
-  title: "Farcaster Frames v2 Demo",
-  description: "A Farcaster Frames v2 demo app",
+  title: "Farcaster MINI DART",
+  description: "A Farcaster Game By TheMehT",
 };
 
 export default function RootLayout({

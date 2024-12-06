@@ -5,7 +5,7 @@ import sdk, {
   type FrameContext,
 } from "@farcaster/frame-sdk";
 export default function Demo(
-  { title }: { title?: string } = { title: "Frames v2 Demo" }
+  { title }: { title?: string } = { title: "Farcaster MINI DART" }
 ) {
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
   const [context, setContext] = useState<FrameContext>();
