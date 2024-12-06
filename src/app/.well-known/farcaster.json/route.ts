@@ -1,16 +1,17 @@
 export async function GET() {
   const config = {
-   accountAssociation: {
-    header: "eyJmaWQiOjI2ODU0MCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDk3QzgxM2I5ODQzYzM3ODI2NDMzNWRjMDQxNTgxNmUzNjI5YUM4MjQifQ",
-    payloa: "eyJkb21haW4iOiJodHRwczovL21pbmlkYXJ0LW9zYnRlYW0udmVyY2VsLmFwcC8ifQ",
-    signature: "MHgyNTc2ZWQzYjEzMGFlZmFlYzI2ZDE3MDg3ZDI1MDE0NTc2ZDdiYWUyNGE5YjVmZTQxZmNhYmUxZGQ4YjY2NTBhMzMxNTYwZThjYjFjMDRkMzA1YjI5Yjg4NDk2MGNkMGUxNzk1NThlYTkxNjJjMTRhODdlNWQ3MTI5MDcyYzAwZTFi"
-  },
+    accountAssociation: {
+      header: "eyJmaWQiOjI2ODU0MCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDk3QzgxM2I5ODQzYzM3ODI2NDMzNWRjMDQxNTgxNmUzNjI5YUM4MjQifQ",
+      payload: "eyJkb21haW4iOiJzdGFjay1ibG9uZC52ZXJjZWwuYXBwLyJ9",
+      signature: "MHg3YWQ2ZWNiMjIyM2FiMDFlNjZiMzRlMWFjMmZkOWZlZTVlNDlkYjYyZTk5YzFmNzIyNDNjMmQ4YmE3MTczOWNlNTczMzNkOTViNzY3ZGE5MjE4N2Q1OTgzZTIwMzRmZTlhZDhmYmUzNWRkMmUzOWM0OTYyYjhmNzFhNWFmZWM4YzFi"
+    },
+  
    frame: {
-    name: "FAR DART",
+    name: "Far Stacks",
     version: "1.0.0",
-    iconUrl: "https://minidart.vercel.app/dart.png",
-    homeUrl: "https://minidart.vercel.app/",
-    splashImageUrl: "https://minidart.vercel.app/splash.png",
+    iconUrl: "https://stack-blond.vercel.app/dart.png",
+    homeUrl: "https://stack-blond.vercel.app/",
+    splashImageUrl: "https://stack-blond.vercel.app/splash.png",
     splashBackgroundColor: "#eeccff",
   }
   };

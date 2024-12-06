@@ -1,16 +1,16 @@
 import { Metadata } from "next";
 import App from "~/app/app";
 
-const appUrl = 'https://minidart.vercel.app';
+const appUrl = 'https://stack-blond.vercel.app';
 
 const frame = {
   version: "next",
   imageUrl: `${appUrl}/frames/hello/opengraph-image`,
   button: {
-    title: "Launch Mini Dart",
+    title: "Launch Stacks Game",
     action: {
       type: "launch_frame",
-      name: "Farcaster Mini Dart",
+      name: "Farcaster Stacks Game",
       url: `${appUrl}/frames/hello/`,
       splashImageUrl: `${appUrl}/splash.png`,
       splashBackgroundColor: "#f7f7f7",

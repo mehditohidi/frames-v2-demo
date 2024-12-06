@@ -5,7 +5,7 @@ import sdk, {
   type FrameContext,
 } from "@farcaster/frame-sdk";
 export default function Demo(
-  { title }: { title?: string } = { title: "Farcaster MINI DART" }
+  { title }: { title?: string } = { title: "Farcaster Stacks" }
 ) {
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
   const [context, setContext] = useState<FrameContext>();
@@ -45,7 +45,7 @@ export default function Demo(
 
       {/* Centered iframe */}
       <iframe
-        src="https://darts-delta.vercel.app"
+        src="https://htmlxm.github.io/h2/stack/"
         style={{
           width: '90%',
           height: '90%',

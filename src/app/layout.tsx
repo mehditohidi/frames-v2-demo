@@ -4,7 +4,7 @@ import "~/app/globals.css";
 import { Providers } from "~/app/providers";
 
 export const metadata: Metadata = {
-  title: "Farcaster MINI DART",
+  title: "Farcaster Stacks Game",
   description: "A Farcaster Game By TheMehT",
 };
 
