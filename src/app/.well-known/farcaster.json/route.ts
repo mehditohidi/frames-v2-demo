@@ -1,23 +1,18 @@
 export async function GET() {
-  const appUrl = process.env.NEXT_PUBLIC_URL;
-
   const config = {
-    accountAssociation: {
-      header:
-        "eyJmaWQiOjM2MjEsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHgyY2Q4NWEwOTMyNjFmNTkyNzA4MDRBNkVBNjk3Q2VBNENlQkVjYWZFIn0",
-      payload: "eyJkb21haW4iOiJmcmFtZXMtdjIudmVyY2VsLmFwcCJ9",
-      signature:
-        "MHhiNDIwMzQ1MGZkNzgzYTExZjRiOTllZTFlYjA3NmMwOTdjM2JkOTY1NGM2ODZjYjkyZTAyMzk2Y2Q0YjU2MWY1MjY5NjI5ZGQ5NTliYjU0YzEwOGI4OGVmNjdjMTVlZTdjZDc2YTRiMGU5NzkzNzA3YzkxYzFkOWFjNTg0YmQzNjFi",
-    },
-    frame: {
-      version: "0.0.0",
-      name: "Frames v2 Demo",
-      iconUrl: `${appUrl}/icon.png`,
-      splashImageUrl: `${appUrl}/splash.png`,
-      splashBackgroundColor: "#f7f7f7",
-      homeUrl: appUrl,
-      webhookUrl: `${appUrl}/api/webhook`,
-    },
+   accountAssociation: {
+    header: "eyJmaWQiOjI2ODU0MCwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDk3QzgxM2I5ODQzYzM3ODI2NDMzNWRjMDQxNTgxNmUzNjI5YUM4MjQifQ",
+    payloa: "eyJkb21haW4iOiJodHRwczovL21pbmlkYXJ0LW9zYnRlYW0udmVyY2VsLmFwcC8ifQ",
+    signature: "MHgyNTc2ZWQzYjEzMGFlZmFlYzI2ZDE3MDg3ZDI1MDE0NTc2ZDdiYWUyNGE5YjVmZTQxZmNhYmUxZGQ4YjY2NTBhMzMxNTYwZThjYjFjMDRkMzA1YjI5Yjg4NDk2MGNkMGUxNzk1NThlYTkxNjJjMTRhODdlNWQ3MTI5MDcyYzAwZTFi"
+  },
+   frame: {
+    name: "FAR DART",
+    version: "0.0.1",
+    iconUrl: "https://minidart.vercel.app/icon.png",
+    homeUrl: "https://minidart.vercel.app/",
+    splashImageUrl: "https://minidart.vercel.app/splash.png",
+    splashBackgroundColor: "#eeccff",
+  }
   };
 
   return Response.json(config);
