@@ -7,8 +7,8 @@ export async function GET() {
   },
    frame: {
     name: "FAR DART",
-    version: "0.0.1",
-    iconUrl: "https://minidart.vercel.app/icon.png",
+    version: "1.0.0",
+    iconUrl: "https://minidart.vercel.app/dart.png",
     homeUrl: "https://minidart.vercel.app/",
     splashImageUrl: "https://minidart.vercel.app/splash.png",
     splashBackgroundColor: "#eeccff",
