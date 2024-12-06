@@ -189,174 +189,34 @@ export default function Demo(
   }
 
   return (
-    <div className="w-[300px] mx-auto py-4 px-2">
-      <h1 className="text-2xl font-bold text-center mb-4">{title}</h1>
+    <div style={{ position: 'relative', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: 0 }}>
 
-      <div className="mb-4">
-        <h2 className="font-2xl font-bold">Context</h2>
-        <button
-          onClick={toggleContext}
-          className="flex items-center gap-2 transition-colors"
+      {context && (
+        <div
+          style={{
+            color: 'yellow',
+            padding: 10,
+            fontFamily: 'monospace',
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            zIndex: 10,
+          }}
         >
-          <span
-            className={`transform transition-transform ${
-              isContextOpen ? "rotate-90" : ""
-            }`}
-          >
-            ➤
-          </span>
-          Tap to expand
-        </button>
-
-        {isContextOpen && (
-          <div className="p-4 mt-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
-            <pre className="font-mono text-xs whitespace-pre-wrap break-words max-w-[260px] overflow-x-">
-              {JSON.stringify(context, null, 2)}
-            </pre>
-          </div>
-        )}
-      </div>
-
-      <div>
-        <h2 className="font-2xl font-bold">Actions</h2>
-
-        <div className="mb-4">
-          <div className="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg my-2">
-            <pre className="font-mono text-xs whitespace-pre-wrap break-words max-w-[260px] overflow-x-">
-              sdk.actions.openUrl
-            </pre>
-          </div>
-          <Button onClick={openUrl}>Open Link</Button>
-        </div>
-
-        <div className="mb-4">
-          <div className="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg my-2">
-            <pre className="font-mono text-xs whitespace-pre-wrap break-words max-w-[260px] overflow-x-">
-              sdk.actions.openUrl
-            </pre>
-          </div>
-          <Button onClick={openWarpcastUrl}>Open Warpcast Link</Button>
-        </div>
-
-        <div className="mb-4">
-          <div className="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg my-2">
-            <pre className="font-mono text-xs whitespace-pre-wrap break-words max-w-[260px] overflow-x-">
-              sdk.actions.close
-            </pre>
-          </div>
-          <Button onClick={close}>Close Frame</Button>
-        </div>
-
-        <div className="mb-4">
-          <div className="p-2 bg-gray-100 dark:bg-gray-800 rounded-lg my-2">
-            <pre className="font-mono text-xs whitespace-pre-wrap break-words max-w-[260px] overflow-x-">
-              sdk.actions.addFrame
-            </pre>
-          </div>
-          {addFrameResult && (
-            <div className="mb-2">Add frame result: {addFrameResult}</div>
-          )}
-          <Button onClick={addFrame}>Add frame to client</Button>
-        </div>
-      </div>
-
-      {notificationDetails && (
-        <div>
-          <h2 className="font-2xl font-bold">Notify</h2>
-
-          {sendNotificationResult && (
-            <div className="mb-2">
-              Send notification result: {sendNotificationResult}
-            </div>
-          )}
-          <div className="mb-4">
-            <Button onClick={sendNotification}>Send notification</Button>
-          </div>
+          <p>Player: @{context.user?.username}</p>
         </div>
       )}
 
-      <div>
-        <h2 className="font-2xl font-bold">Wallet</h2>
-
-        {address && (
-          <div className="my-2 text-xs">
-            Address: <pre className="inline">{truncateAddress(address)}</pre>
-          </div>
-        )}
-
-        {chainId && (
-          <div className="my-2 text-xs">
-            Chain ID: <pre className="inline">{chainId}</pre>
-          </div>
-        )}
-
-        <div className="mb-4">
-          <Button
-            onClick={() =>
-              isConnected
-                ? disconnect()
-                : connect({ connector: config.connectors[0] })
-            }
-          >
-            {isConnected ? "Disconnect" : "Connect"}
-          </Button>
-        </div>
-
-        <div className="mb-4">
-          <SignMessage />
-        </div>
-
-        {isConnected && (
-          <>
-            <div className="mb-4">
-              <SendEth />
-            </div>
-            <div className="mb-4">
-              <Button
-                onClick={sendTx}
-                disabled={!isConnected || isSendTxPending}
-                isLoading={isSendTxPending}
-              >
-                Send Transaction (contract)
-              </Button>
-              {isSendTxError && renderError(sendTxError)}
-              {txHash && (
-                <div className="mt-2 text-xs">
-                  <div>Hash: {truncateAddress(txHash)}</div>
-                  <div>
-                    Status:{" "}
-                    {isConfirming
-                      ? "Confirming..."
-                      : isConfirmed
-                      ? "Confirmed!"
-                      : "Pending"}
-                  </div>
-                </div>
-              )}
-            </div>
-            <div className="mb-4">
-              <Button
-                onClick={signTyped}
-                disabled={!isConnected || isSignTypedPending}
-                isLoading={isSignTypedPending}
-              >
-                Sign Typed Data
-              </Button>
-              {isSignTypedError && renderError(signTypedError)}
-            </div>
-            <div className="mb-4">
-              <Button
-                onClick={handleSwitchChain}
-                disabled={isSwitchChainPending}
-                isLoading={isSwitchChainPending}
-              >
-                Switch to {chainId === base.id ? "Optimism" : "Base"}
-              </Button>
-              {isSwitchChainError && renderError(switchChainError)}
-            </div>
-          </>
-        )}
-      </div>
+      {/* Centered iframe */}
+      <iframe
+        src="https://darts-delta.vercel.app"
+        style={{
+          width: '90%',
+          height: '90%',
+          border: 'none',
+        }}
+        title = {title}
+      ></iframe>
     </div>
   );
 }
