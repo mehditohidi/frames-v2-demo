@@ -14,11 +14,10 @@ export default async function Image() {
       <div
         tw="h-full w-full flex flex-col justify-center items-center relative"
         style={{
-          backgroundImage: "url('https://farcaster-memory.vercel.app/bg.jpg')",
-          backgroundSize: "contain",
-          backgroundPosition: "center",
+          backgroundColor: 'yellow'
         }}
       >
+        <h1 style={{color:'black'}}>Henlo Memory Game</h1>
       </div>
 
     ),

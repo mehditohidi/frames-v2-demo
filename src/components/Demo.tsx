@@ -47,8 +47,8 @@ export default function Demo(
       <iframe
         src="https://memory-steel-eta.vercel.app/"
         style={{
-          width: '100%',
-          height: '100%',
+          width: '90%',
+          height: '90%',
           border: 'none',
         }}
         title = {title}
