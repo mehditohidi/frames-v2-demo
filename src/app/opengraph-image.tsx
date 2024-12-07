@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Farcaster Stacks Game";
+export const alt = "Farcaster Memory";
 export const size = {
   width: 600,
   height: 400,
@@ -14,12 +14,12 @@ export default async function Image() {
       <div
         tw="h-full w-full flex flex-col justify-center items-center relative"
         style={{
-          backgroundImage: "url('https://stack-blond.vercel.app/bg.jpg')",
+          backgroundImage: "url('https://farcaster-memory.vercel.app/bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <h1 tw="text-6xl">Far Stack Game</h1>
+        <h1 tw="text-6xl">Farcaster Memory</h1>
       </div>
 
     ),

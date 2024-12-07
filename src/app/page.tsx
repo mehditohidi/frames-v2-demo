@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import App from "./app";
 
-const appUrl = "https://stack-blond.vercel.app";
+const appUrl = "https://farcaster-memory.vercel.app";
 
 const frame = {
   version: "next",
@@ -22,10 +22,10 @@ export const revalidate = 300;
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: "Launch Stack",
+    title: "Launch Memory",
     openGraph: {
-      title: "Farcaster Stack",
-      description: "A Game by TheMehT",
+      title: "Farcaster Memory",
+      description: "A Game By Sefiyed",
     },
     other: {
       "fc:frame": JSON.stringify(frame),

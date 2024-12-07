@@ -5,7 +5,7 @@ import sdk, {
   type FrameContext,
 } from "@farcaster/frame-sdk";
 export default function Demo(
-  { title }: { title?: string } = { title: "Farcaster Stacks" }
+  { title }: { title?: string } = { title: "Farcaster Memory" }
 ) {
   const [isSDKLoaded, setIsSDKLoaded] = useState(false);
   const [context, setContext] = useState<FrameContext>();
@@ -45,10 +45,10 @@ export default function Demo(
 
       {/* Centered iframe */}
       <iframe
-        src="https://htmlxm.github.io/h2/stack/"
+        src="https://memory-osbteam.vercel.app/"
         style={{
-          width: '90%',
-          height: '90%',
+          width: '100%',
+          height: '100%',
           border: 'none',
         }}
         title = {title}
