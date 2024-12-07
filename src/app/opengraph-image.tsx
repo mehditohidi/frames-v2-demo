@@ -15,11 +15,10 @@ export default async function Image() {
         tw="h-full w-full flex flex-col justify-center items-center relative"
         style={{
           backgroundImage: "url('https://farcaster-memory.vercel.app/bg.jpg')",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundPosition: "center",
         }}
       >
-        <h1 tw="text-6xl">Farcaster Memory</h1>
       </div>
 
     ),
